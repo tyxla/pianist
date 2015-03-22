@@ -18,7 +18,7 @@ jQuery(function($) {
 		}).on($.jPlayer.event.play, function() {
 			setTimeout(function() {
 				key.removeClass('pressed');
-			}, 500);
+			}, 300);
 		});
 	});
 
@@ -70,10 +70,23 @@ jQuery(function($) {
 		187: 'f#6',
 	};
 
+	var keyIsDown = {};
 	$(document).on('keydown', function(event) {
-		if (typeof keyMappings[event.keyCode] !== 'undefined') {
-			$('[data-tone="' + keyMappings[event.keyCode] + '"]').trigger('mousedown');
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+
+		if ( !keyIsDown[keycode] ) {
+			if (typeof keyMappings[keycode] !== 'undefined') {
+				$('[data-tone="' + keyMappings[keycode] + '"]').trigger('mousedown');
+			}
+
+			keyIsDown[keycode] = true;
 		}
+	});
+
+	$(document).on('keyup', function(event) {
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+
+		keyIsDown[keycode] = false;
 	});
 
 });
