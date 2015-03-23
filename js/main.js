@@ -1,12 +1,15 @@
 jQuery(function($) {
 
 	var $body = $('body');
+	var $doc = $(document);
 
+	// initialize the sound player of each key
 	$('.piano-keyboard .key').each(function() {
 		var key = $(this);
 		var tone = key.data('tone');
 		var toneID = tone.replace('#', '_');
 		var player = $('<div id="' + toneID + '" class="hidden"></div>').appendTo($body);
+
 		player.jPlayer({
 			ready: function (event) {
 				$(this).jPlayer("setMedia", {
@@ -22,6 +25,7 @@ jQuery(function($) {
 		});
 	});
 
+	// handler for mousedown/touchstart for each key
 	$('.piano-keyboard .key').on('mousedown touchstart', function() {
 		var tone = $(this).data('tone');
 		var toneID = tone.replace('#', '_');
@@ -30,6 +34,7 @@ jQuery(function($) {
 		$(this).addClass('pressed');
 	});
 
+	// piano keyboard to computer keyboard key mappings 
 	var keyMappings = {
 		90: 'c4', // Z
 		88: 'd4', // X
@@ -73,10 +78,12 @@ jQuery(function($) {
 		187: 'f#6', // =
 	};
 
+	// handle keydown to allow playing with keyboard
 	var keyIsDown = {};
-	$(document).on('keydown', function(event) {
+	$doc.on('keydown', function(event) {
 		var keycode = (event.keyCode ? event.keyCode : event.which);
 
+		// disallow repetitive keydown event
 		if ( !keyIsDown[keycode] ) {
 			if (typeof keyMappings[keycode] !== 'undefined') {
 				$('[data-tone="' + keyMappings[keycode] + '"]').trigger('mousedown');
@@ -86,7 +93,8 @@ jQuery(function($) {
 		}
 	});
 
-	$(document).on('keyup', function(event) {
+	// handle keyup to reset the keydown event flag
+	$doc.on('keyup', function(event) {
 		var keycode = (event.keyCode ? event.keyCode : event.which);
 
 		keyIsDown[keycode] = false;

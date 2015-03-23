@@ -3,7 +3,7 @@ Pianist
 
 ## About
 
-A great web app that allows you to play a warm, bright grand piano. Written (on JavaScript) with love.
+A great web app that allows you to play a warm, bright grand piano. Written (on JavaScript and pure CSS - no images) with love.
 
 ## How to play
 
