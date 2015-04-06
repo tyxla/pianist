@@ -1,5 +1,8 @@
 * { margin: 0px; padding: 0px; outline: 0; }
 
+::selection { background: transparent; }
+::-moz-selection { background: transparent; }
+
 body { background: #666; overflow-x: scroll; }
 
 a { color: #fff; text-decoration: none; }
