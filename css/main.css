@@ -1,4 +1,10 @@
-* { margin: 0px; padding: 0px; outline: 0; }
+* { margin: 0px; padding: 0px; outline: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 ::selection { background: transparent; }
 ::-moz-selection { background: transparent; }
