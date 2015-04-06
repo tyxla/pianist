@@ -50,9 +50,9 @@
 					}
 					?>
 					<li>
-						<div class="key" data-tone="<?php echo $current_tone; ?>"></div>
+						<div class="key" data-tone="<?php echo $current_tone; ?>"><em><?php echo $current_tone; ?></em></div>
 						<?php if ($has_sharp && $current_tone !== $last_tone): ?>
-							<span class="key key-sharp" data-tone="<?php echo $current_tone_sharp; ?>"></span>
+							<span class="key key-sharp" data-tone="<?php echo $current_tone_sharp; ?>"><em><?php echo $current_tone_sharp; ?></em></span>
 						<?php endif; ?>
 					</li>
 					<?php
