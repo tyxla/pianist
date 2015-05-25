@@ -18,6 +18,7 @@ jQuery(function($) {
 					oga: "audio/ogg/" + _tone + '.ogg'
 				});
 			},
+
 			supplied: "m4a, oga"
 		}).on($.jPlayer.event.play, function() {
 			setTimeout(function() {
@@ -36,6 +37,8 @@ jQuery(function($) {
 	});
 
 	// piano keyboard to computer keyboard key mappings 
+	// starting from lower key rows, going to upper key rows
+	// as positioned on a QWERTY keyboard
 	var keyMappings = {
 		90: 'c4', // Z
 		88: 'd4', // X
