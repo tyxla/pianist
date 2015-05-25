@@ -7,7 +7,7 @@ A great web app that allows you to play a warm, bright grand piano. Written (on 
 
 ## How to play
 
-You can play either by using the mouse, or by using the keyboard. Below you will find the default key mappings for the tones.
+You can play either by using the mouse, or by using the keyboard. Below you will find the default key mappings for the tones. They are ordered from the bottom to the top key line as positioned on a QWERTY keyboard.
 
 ### Line 0 (ZXC...)
 * C4 - Z
