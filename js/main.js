@@ -7,14 +7,15 @@ jQuery(function($) {
 	$('.piano-keyboard .key').each(function() {
 		var key = $(this);
 		var tone = key.data('tone');
+		var _tone = encodeURIComponent(tone);
 		var toneID = tone.replace('#', '_');
 		var player = $('<div id="' + toneID + '" class="hidden"></div>').appendTo($body);
 
 		player.jPlayer({
 			ready: function (event) {
 				$(this).jPlayer("setMedia", {
-					m4a: "audio/mp3/" + encodeURIComponent(tone) + '.mp3',
-					oga: "audio/ogg/" + encodeURIComponent(tone) + '.ogg'
+					m4a: "audio/mp3/" + _tone + '.mp3',
+					oga: "audio/ogg/" + _tone + '.ogg'
 				});
 			},
 			supplied: "m4a, oga"
