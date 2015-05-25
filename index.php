@@ -18,13 +18,13 @@
 			<?php 
 			// list of tones, and whether they have a corresponding sharp tone
 			$tones = array(
-				'c' => true,
-				'd' => true,
-				'e' => false,
-				'f' => true,
-				'g' => true,
-				'a' => true,
-				'b' => false,
+				'c' => true, // C# / Db
+				'd' => true, // D# / Eb
+				'e' => false, // there are no E# / Fb - they are equal to F / E
+				'f' => true, // F# / Gb
+				'g' => true, // G# / Ab
+				'a' => true, // A# / Bb
+				'b' => false, // there are no B# / Cb - they are equal to C / B
 			); 
 
 			// last tone on our keyboard
