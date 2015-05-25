@@ -32,55 +32,10 @@ jQuery(function($) {
 		var tone = $(this).data('tone');
 		var toneID = tone.replace('#', '_');
 		var player = $('#' + toneID);
+
 		player.jPlayer('stop').jPlayer('play');
 		$(this).addClass('pressed');
 	});
-
-	// piano keyboard to computer keyboard key mappings 
-	// starting from lower key rows, going to upper key rows
-	// as positioned on a QWERTY keyboard
-	var keyMappings = {
-		90: 'c4', // Z
-		88: 'd4', // X
-		67: 'e4', // C
-		86: 'f4', // V
-		66: 'g4', // B
-		78: 'a4', // N
-		77: 'b4', // M
-		188: 'c5', // ,
-		190: 'd5', // .
-		191: 'e5', // /
-
-		83: 'c#4', // S
-		68: 'd#4', // D
-		71: 'f#4', // G
-		72: 'g#4', // H
-		74: 'a#4', // J
-		76: 'c#5', // L
-		186: 'd#5', // ;
-
-		81: 'c5', // Q
-		87: 'd5', // W
-		69: 'e5', // E
-		82: 'f5', // R
-		84: 'g5', // T
-		89: 'a5', // Y
-		85: 'b5', // U
-		73: 'c6', // I
-		79: 'd6', // O
-		80: 'e6', // P
-		219: 'f6', // [
-		221: 'g6', // ]
-
-		50: 'c#5', // 2
-		51: 'd#5', // 3
-		53: 'f#5', // 5
-		54: 'g#5', // 6
-		55: 'a#5', // 7
-		57: 'c#6', // 9
-		48: 'd#6', // 0
-		187: 'f#6', // =
-	};
 
 	// handle keydown to allow playing with keyboard
 	var keyIsDown = {};
@@ -105,3 +60,49 @@ jQuery(function($) {
 	});
 
 });
+
+// piano keyboard to computer keyboard key mappings 
+// starting from lower key rows, going to upper key rows
+// as positioned on a QWERTY keyboard
+var keyMappings = {
+	90: 'c4', // Z
+	88: 'd4', // X
+	67: 'e4', // C
+	86: 'f4', // V
+	66: 'g4', // B
+	78: 'a4', // N
+	77: 'b4', // M
+	188: 'c5', // ,
+	190: 'd5', // .
+	191: 'e5', // /
+
+	83: 'c#4', // S
+	68: 'd#4', // D
+	71: 'f#4', // G
+	72: 'g#4', // H
+	74: 'a#4', // J
+	76: 'c#5', // L
+	186: 'd#5', // ;
+
+	81: 'c5', // Q
+	87: 'd5', // W
+	69: 'e5', // E
+	82: 'f5', // R
+	84: 'g5', // T
+	89: 'a5', // Y
+	85: 'b5', // U
+	73: 'c6', // I
+	79: 'd6', // O
+	80: 'e6', // P
+	219: 'f6', // [
+	221: 'g6', // ]
+
+	50: 'c#5', // 2
+	51: 'd#5', // 3
+	53: 'f#5', // 5
+	54: 'g#5', // 6
+	55: 'a#5', // 7
+	57: 'c#6', // 9
+	48: 'd#6', // 0
+	187: 'f#6', // =
+};
