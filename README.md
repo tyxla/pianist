@@ -53,3 +53,7 @@ You can play either by using the mouse, or by using the keyboard. Below you will
 * C#6 - 9
 * D#6 - 0
 * F#6 - =
+
+## New features & further development
+
+I'd welcome any suggestions and ideas for new functionality. There is a number of open ideas for new features and enhancements, but I'd love to receive new ones that would add up additional super amazing great awesomeness to this project.
